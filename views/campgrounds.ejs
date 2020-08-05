@@ -1,0 +1,31 @@
+<%- include("partials/header") %>
+
+
+<div class="container">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Welcome to YelpCamp</h1>
+            <p>You  are on the world's best camp's site!</p>
+            <p>
+                <a class="btn btn-primary btn-large" href="/compounds/new">Add Nw compounds</a>
+            </p>
+        </div>
+    </header>
+    
+    <!--imp for getting images with different sizes look pretty : style = "display:flex; flex-wrap: wrap;" -->
+    <div class="row text-center">
+            <% campgrounds.forEach((campground)=>{ %> 
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="<%= campground.image %>" >
+                        <div class="caption">
+                            <h4> <%= campground.name %></h4>
+                        </div>
+                    </div>
+                </div>
+            <%})%>
+    </div>
+
+</div>
+
+<%- include("partials/footer") %>
