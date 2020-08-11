@@ -6,6 +6,11 @@
 
 <img src = "<%= campground.image %>">
 
-<h3>
+<p>
 <%= campground.description %>
-</h3>
+</p>
+
+<br>
+<% campground.comments.forEach(function(comment){ %>
+    <p> <strong><%= comment.author %> </strong> - <%= comment.text %></p>
+<% }) %>
