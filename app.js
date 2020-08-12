@@ -3,6 +3,7 @@ var app = express(),
     bodyParser = require("body-parser"),
     mongoose = require("mongoose"),
     Campground = require("./models/campground"),
+    Comment = require("./models/comment"),
     seedDB = require("./seed");
 
 app.use(bodyParser.urlencoded({extended : true}));
@@ -38,7 +39,7 @@ app.get('/', (req,res) =>{
 });
 
 app.get('/campgrounds/new', (req,res) =>{
-    res.render("new");
+    res.render("campgrounds/new");
 });
 
 
@@ -61,7 +62,7 @@ app.get('/campgrounds',(req,res)=>{
                 console.log(err);
             }
             else{
-                res.render("index", {campgrounds: allCampgrounds});
+                res.render("campgrounds/index", {campgrounds: allCampgrounds});
             }
         }
     )
@@ -92,14 +93,51 @@ app.get('/campgrounds/:id', (req,res) =>{
             console.log(err);
         }
         else{
+            console.log("from asdad");
             console.log(foundCampground);
-            res.render("show",{campground : foundCampground});
+            res.render("campgrounds/show",{campground : foundCampground});
         }
     });
     //req.params.id;
     //res.render("show");
 
 });
+
+//=================================================
+//comments routs
+//=================================================
+
+//new route
+app.get("/campgrounds/:id/comments/new", function(req,res){
+    Campground.findById(req.params.id, function(err,foundCampground){
+        if(err){
+            console.log(err);
+        }else{
+            res.render("comments/new",{campground : foundCampground});
+        }
+    });
+});
+
+//create new comment
+app.post("/campgrounds/:id/comments", function(req,res){
+    Campground.findById(req.params.id, function(err, foundCampground){
+        if(err){
+            console.log(err);
+        }else{
+            console.log(req.body.comment);
+            Comment.create(req.body.comment, function(err,Ncomment){
+                if(err){
+                    console.log(err);
+                }else{
+                    foundCampground.comments.push(Ncomment);
+                    foundCampground.save();
+                    res.redirect('/campgrounds/'+ req.params.id);
+                }
+            });
+        }
+    });
+});
+
 
 app.listen(4000,'localhost', ()=>{
     console.log("YelpCamp server has been started");
