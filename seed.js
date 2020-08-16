@@ -6,17 +6,17 @@ var data = [
     {
         name : "Mountain",
         image : "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        description : "Beautiful!"
+        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec laoreet enim, eu efficitur nulla. Cras cursus pharetra luctus. Maecenas vitae mattis leo. Sed at dui sit amet massa consequat imperdiet ac quis sem. Maecenas ut lacus tincidunt, venenatis lectus at, vulputate mi. Nullam eu faucibus augue. Pellentesque convallis tempus auctor. Nam sollicitudin pretium mauris et ornare. Vivamus malesuada fringilla velit, sed convallis libero pellentesque eu. Etiam tempor nulla sed mauris eleifend, non venenatis nulla tempus. Cras dictum, ligula et fermentum pharetra, ex turpis commodo diam, ac faucibus lacus ante sed ipsum. Duis id nulla et arcu pretium feugiat. Nulla in ultrices dolor."
     },
     {
         name : "Hills",
         image : "https://images.unsplash.com/photo-1532339142463-fd0a8979791a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        description : "Quite palce, filled with serenity of nature"
+        description : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec laoreet enim, eu efficitur nulla. Cras cursus pharetra luctus. Maecenas vitae mattis leo. Sed at dui sit amet massa consequat imperdiet ac quis sem. Maecenas ut lacus tincidunt, venenatis lectus at, vulputate mi. Nullam eu faucibus augue. Pellentesque convallis tempus auctor. Nam sollicitudin pretium mauris et ornare. Vivamus malesuada fringilla velit, sed convallis libero pellentesque eu. Etiam tempor nulla sed mauris eleifend, non venenatis nulla tempus. Cras dictum, ligula et fermentum pharetra, ex turpis commodo diam, ac faucibus lacus ante sed ipsum. Duis id nulla et arcu pretium feugiat. Nulla in ultrices dolor.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec laoreet enim, eu efficitur nulla. Cras cursus pharetra luctus. Maecenas vitae mattis leo. Sed at dui sit amet massa consequat imperdiet ac quis sem. Maecenas ut lacus tincidunt, venenatis lectus at, vulputate mi. Nullam eu faucibus augue. Pellentesque convallis tempus auctor. Nam sollicitudin pretium mauris et ornare. Vivamus malesuada fringilla velit, sed convallis libero pellentesque eu. Etiam tempor nulla sed mauris eleifend, non venenatis nulla tempus. Cras dictum, ligula et fermentum pharetra, ex turpis commodo diam, ac faucibus lacus ante sed ipsum. Duis id nulla et arcu pretium feugiat. Nulla in ultrices dolor."
     },
     {
         name : "Night camp",
         image : "https://images.unsplash.com/photo-1537565266759-34bbc16be345?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
-        description : "Silent night, pleasant site"
+        description : "Silent night, pleasant site. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec laoreet enim, eu efficitur nulla. Cras cursus pharetra luctus. Maecenas vitae mattis leo. Sed at dui sit amet massa consequat imperdiet ac quis sem. Maecenas ut lacus tincidunt, venenatis lectus at, vulputate mi. Nullam eu faucibus augue. Pellentesque convallis tempus auctor. Nam sollicitudin pretium mauris et ornare. Vivamus malesuada fringilla velit, sed convallis libero pellentesque eu. Etiam tempor nulla sed mauris eleifend, non venenatis nulla tempus. Cras dictum, ligula et fermentum pharetra, ex turpis commodo diam, ac faucibus lacus ante sed ipsum. Duis id nulla et arcu pretium feugiat. Nulla in ultrices dolor."
     }
 ]
 
