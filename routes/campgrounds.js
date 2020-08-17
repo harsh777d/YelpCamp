@@ -2,7 +2,7 @@ var express = require("express");
 var router = express.Router();
 var Campground = require("../models/campground");
 
-router.get('/new', (req,res) =>{
+router.get('/new', isLoggedIn, (req,res) =>{
     res.render("campgrounds/new");
 });
 
@@ -19,19 +19,25 @@ router.get('/',(req,res)=>{
     );
 });
 
-router.post('/new', (req,res) =>{
-    console.log(req);
+router.post('/new', isLoggedIn, (req,res) =>{
+    //console.log(req);
     var name = req.body.name;
     var image = req.body.image;
+    var desc = req.body.description;
+    var author = {
+        id : req.user._id,
+        username : req.user.username
+    }
 
-    var newCampground = { name : name, image : image}
+    var newCampground = { name : name, image : image, description : desc, author : author}
 
     Campground.create(newCampground, (err,newlyCreated)=>{
         if(err){
             console.log(err);
         }
         else{
-            res.redirect("/campground");
+            console.log(newlyCreated);
+            res.redirect("/campgrounds");
         }
     });
 });
@@ -48,5 +54,12 @@ router.get('/:id', (req,res) =>{
         }
     });
 });
+
+function isLoggedIn(req,res,next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.redirect("/login");
+}
 
 module.exports = router;
