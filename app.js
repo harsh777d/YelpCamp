@@ -43,7 +43,7 @@ mongoose.connect("mongodb://localhost/yelp_camp",{
 .then(()=> console.log('connected to db!'))
 .catch(error => console.log(error.message));
 
-seedDB();
+//seedDB();
 
 app.use("/campgrounds",campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
