@@ -53,7 +53,7 @@ app.use("/campgrounds",campgroundRoutes);
 app.use("/campgrounds/:id/comments",commentRoutes);
 app.use(indexRoutes);
 
-let port = process.env.Port;
+let port = process.env.PORT;
 
 if( port == null || port == ''){
     port = 4000;
