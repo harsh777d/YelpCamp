@@ -59,13 +59,13 @@ if( port == null || port == ''){
     port = 4000;
 }
 
-let host = process.env.IP;
+// let host = process.env.IP;
 
-if(host == null || host == ''){
-    host = 'localhost';
-}
+// if(host == null || host == ''){
+//     host = 'localhost';
+// }
 
 
-app.listen(port, host, ()=>{
+app.listen(port, ()=>{
     console.log("YelpCamp server has been started");
 });
