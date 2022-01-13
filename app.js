@@ -39,7 +39,9 @@ app.use(function(req,res,next){
     next();
 });
 
-mongoose.connect(process.env.DATABASE,{
+const db_url = process.env.DATABASE || 'mongodb+srv://harsh:harsh@mongodb@cluster0.ejvsx.mongodb.net/yelpcamp?retryWrites=true&w=majority'
+
+mongoose.connect(db_url,{
     useNewUrlParser : true,
     useUnifiedTopology : true
 })
@@ -67,5 +69,5 @@ if( port == null || port == ''){
 
 
 app.listen(port, ()=>{
-    console.log("YelpCamp server has been started");
+    console.log("YelpCamp server has been started", " port: ", port);  
 });
