@@ -39,7 +39,7 @@ app.use(function(req,res,next){
     next();
 });
 
-const db_url = process.env.DATABASE || 'mongodb+srv://harsh:harsh@mongodb@cluster0.ejvsx.mongodb.net/yelpcamp?retryWrites=true&w=majority'
+const db_url = process.env.DATABASE
 
 mongoose.connect(db_url,{
     useNewUrlParser : true,
